@@ -20,6 +20,6 @@ tasks.withType(JavaCompile) {
 }
 
 wrapper {
-    gradleVersion = '8.2' // Specify the Gradle version you want to use
+    gradleVersion = '9.0' // Specify the Gradle version you want to use
     distributionType = Wrapper.DistributionType.ALL
 }
