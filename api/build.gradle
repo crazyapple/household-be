@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'org.springframework.boot' version '3.1.5'
+    id 'io.spring.dependency-management' version '1.1.3'
+}
+
+java {
+    sourceCompatibility = '17'
+}
+
+group = "${group}.api"
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    lombokVersion = "1.18.28"
+    jacksonVersion = "2.15.2"
+    gauvaVersion = "32.0.0-jre"
+    commonVersion = "3.12.0"
+}
+
+dependencies {
+    implementation project(':service')
+    implementation "com.google.guava:guava:$gauvaVersion"
+    implementation "org.apache.commons:commons-lang3:$commonVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "org.projectlombok:lombok:$lombokVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
+

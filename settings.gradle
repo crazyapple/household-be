@@ -1,0 +1,6 @@
+rootProject.name = 'fresher-basic'
+include 'api'
+include 'service'
+include 'model'
+include 'repository'
+

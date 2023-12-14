@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: post22gres05
+    url: jdbc:postgresql://localhost:5432/household_management
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
