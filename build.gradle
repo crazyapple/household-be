@@ -26,7 +26,7 @@ springBoot {
 bootJar {
     archiveBaseName = 'backend'
     archiveVersion = '1.0.0'
-    mainClas = 'mwg.web.backend.Application'
+    mainClass = 'mwg.web.backend.Application'
 }
 
 repositories {
