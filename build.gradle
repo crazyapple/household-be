@@ -1,13 +1,15 @@
 plugins {
-    id 'java'
+	id 'java'
+	id 'org.springframework.boot' version '3.2.0'
 }
+
+apply plugin: 'io.spring.dependency-management'
 
 repositories {
     jcenter()
 }
 
 dependencies {
-    
 }
 
 version '1.0'
@@ -19,6 +21,6 @@ tasks.withType(JavaCompile) {
 }
 
 wrapper {
-    gradleVersion = '7.0.2' // Specify the Gradle version you want to use
+    gradleVersion = '8.2' // Specify the Gradle version you want to use
     distributionType = Wrapper.DistributionType.ALL
 }
