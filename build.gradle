@@ -15,7 +15,7 @@ dependencies {
 }
 
 bootJar {
-    archiveBaseName = 'Application'
+    archiveBaseName = 'backend'
     archiveVersion = '1.0.0'
     mainClass = 'mwg.web.backend.Application'
 }
