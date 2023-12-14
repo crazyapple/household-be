@@ -10,6 +10,7 @@ java {
 }
 
 dependencies {
+    classpath 'com.google.gms:google-services:4.3.0'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // Add other dependencies as needed
 }
@@ -26,8 +27,6 @@ bootJar {
 repositories {
     jcenter()
 }
-
-classpath 'com.google.gms:google-services:4.3.0'
 
 version '1.0'
 
