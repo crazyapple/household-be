@@ -13,11 +13,17 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // Add other dependencies as needed
 }
-
+application {
+    mainClassName = 'mwg.web.backend.Application'
+}
 bootJar {
     archiveBaseName = 'backend'
     archiveVersion = '1.0.0'
-    mainClass = 'mwg.web.backend.Application'
+    manifest {
+        attributes(
+            'Main-Class': 'mwg.web.backend.Application'
+        )
+    }
 }
 repositories {
     jcenter()
