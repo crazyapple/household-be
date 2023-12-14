@@ -12,7 +12,7 @@ dependencies {
 bootJar {
     archiveBaseName = 'Application'
     archiveVersion = '1.0.0'
-    mainClassName = 'mwg.web.backend.Application'
+    mainClass = 'mwg.web.backend.Application'
 }
 repositories {
     jcenter()
