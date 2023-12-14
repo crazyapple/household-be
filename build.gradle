@@ -15,14 +15,13 @@ dependencies {
 }
 
 bootJar {
-    archiveBaseName = 'backend'
-    archiveVersion = '1.0.0'
-    manifest {
-        attributes(
-            'Main-Class': 'mwg.web.backend.Application'
-        )
-    }
+    enabled = false
 }
+
+jar {
+    enabled = true
+}
+
 repositories {
     jcenter()
 }
