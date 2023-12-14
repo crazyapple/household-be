@@ -13,7 +13,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     // Add other dependencies as needed
 }
-application {
+springBoot {
     mainClassName = 'mwg.web.backend.Application'
 }
 bootJar {
