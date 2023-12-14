@@ -14,12 +14,13 @@ dependencies {
     // Add other dependencies as needed
 }
 
-bootJar {
-    enabled = false
+springBoot {
+    mainClass = 'mwg.web.backend.Application'
 }
 
-jar {
-    enabled = true
+bootJar {
+    archiveBaseName = 'backend'
+    archiveVersion = '1.0.0'
 }
 
 repositories {
