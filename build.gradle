@@ -8,11 +8,15 @@ java {
     sourceCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
     targetCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
 }
-
-dependencies {
-    classpath 'com.google.gms:google-services:4.3.0'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    // Add other dependencies as needed
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.google.gms:google-services:4.2.0'
+    }
 }
 
 springBoot {
@@ -22,6 +26,7 @@ springBoot {
 bootJar {
     archiveBaseName = 'backend'
     archiveVersion = '1.0.0'
+    mainClas = 'mwg.web.backend.Application'
 }
 
 repositories {
