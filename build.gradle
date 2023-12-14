@@ -9,7 +9,7 @@ dependencies {
     // Add other dependencies as needed
 }
 
-application {
+springBoot {
     mainClassName = 'com.example.Application'
 }
 
