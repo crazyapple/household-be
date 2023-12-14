@@ -1,49 +1,47 @@
-buildscript {
-	plugins {
-		id 'java'
-		id 'org.springframework.boot' version '3.1.5' apply true
-	   	id 'io.spring.dependency-management' version '1.1.3'
-	}
-	
-	java {
-	    sourceCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
-	    targetCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
-	}
-	
-	repositories {
-		google()
-		jcenter()
-	}
-	dependencies {
-		classpath 'com.android.tools.build:gradle:3.3.0'
-		classpath 'com.google.gms:google-services:4.2.0'
-	}
-	
-	
-	springBoot {
-	    mainClass = 'mwg.web.backend.Application'
-	}
-	
-	bootJar {
-	    archiveBaseName = 'backend'
-	    archiveVersion = '1.0.0'
-	    mainClas = 'mwg.web.backend.Application'
-	}
-	
-	repositories {
-	    jcenter()
-	}
-	
-	version '1.0'
-	
-	sourceCompatibility = 1.8
-	
-	tasks.withType(JavaCompile) {
-	    options.encoding = 'UTF-8'
-	}
-	
-	wrapper {
-	    gradleVersion = '9.0' // Specify the Gradle version you want to use
-	    distributionType = Wrapper.DistributionType.ALL
-	}
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.5' apply true
+	id 'io.spring.dependency-management' version '1.1.3'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
+    targetCompatibility = JavaVersion.VERSION_17 // Use the appropriate Java version
+}
+
+repositories {
+	google()
+	jcenter()
+}
+dependencies {
+	classpath 'com.android.tools.build:gradle:3.3.0'
+	classpath 'com.google.gms:google-services:4.2.0'
+}
+
+
+springBoot {
+    mainClass = 'mwg.web.backend.Application'
+}
+
+bootJar {
+    archiveBaseName = 'backend'
+    archiveVersion = '1.0.0'
+    mainClas = 'mwg.web.backend.Application'
+}
+
+repositories {
+    jcenter()
+}
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+wrapper {
+    gradleVersion = '9.0' // Specify the Gradle version you want to use
+    distributionType = Wrapper.DistributionType.ALL
 }
